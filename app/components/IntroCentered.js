@@ -38,7 +38,7 @@ const IntroCentered = () => {
   return (
     <main
       ref={containerRef}
-      className=" flex flex-col items-center justify-center text-white w-1/2 mx-auto text-center mt-9"
+      className="IntroCentered flex flex-col items-center justify-center text-white w-1/2 mx-auto text-center mt-9"
     >
       <h1 className=" title">I BUILD WEB INTERFACES !</h1>
       <p className={`${kavivnar.className} name  `}>Ali Kumail</p>

@@ -411,3 +411,21 @@ main {
     opacity: 0.25;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+  html {
+    font-size: 90%;
+  }
+  .IntroCentered {
+    width: 80%;
+  }
+  .navbar li a {
+    font-size: 0.55rem;
+  }
+  .btn-container {
+    margin-top: 1.5rem;
+  }
+}
