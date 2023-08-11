@@ -6,6 +6,7 @@
   --foreground-rgb: #fff;
   --background-color: #0a192f;
   --green: #64ffda;
+  --light-navy: #112240;
 }
 * {
   margin: 0;
@@ -15,6 +16,32 @@
 body {
   color: var(--foreground-rgb) !important;
   background-color: var(--background-color);
+}
+
+/* Style the scrollbar track (background) */
+::-webkit-scrollbar {
+  background-color: var(--green); /* Change this to your desired thumb color */
+  width: 4px;
+  opacity: 0.9;
+}
+::-webkit-scrollbar-track {
+  background-color: #0a192f; /* Change this to your desired background color */
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--green); /* Change this to your desired thumb color */
+  border-radius: 8px; /* Optional: Add rounded corners to the thumb */
+}
+
+/* Optionally, style the scrollbar when hovered */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Change this to your desired hover color */
+}
+
+/* Optionally, style the scrollbar corner (between vertical and horizontal scrollbars) */
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* Change this to your desired background color */
 }
 
 .noise {
@@ -175,10 +202,10 @@ h3 {
 }
 .tools-container {
   opacity: 0;
-  transition: opacity 0.9s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
   /* transition-delay: 0.1s; */
   width: 80%;
-  margin: 0.9rem 0;
+  margin: 1.1rem 0;
   transform: translateY(10px);
 }
 .tools-wrapper {
@@ -250,6 +277,98 @@ h3 {
 }
 .tools-wrapper:hover .tools-wrapper-title {
   color: var(--green);
+}
+.project {
+  margin-bottom: 14rem;
+}
+.project h4 {
+  font-size: 1.55rem;
+  font-style: normal;
+  font-weight: 600;
+}
+.project p {
+  font-size: 0.885rem;
+  opacity: 0.785;
+  width: 88%;
+  line-height: 150%;
+}
+.project-right img {
+  margin: 0.275rem auto;
+}
+.project-left {
+  height: 100%;
+  position: sticky;
+  top: 9rem;
+}
+.tech-used-img {
+  position: relative;
+  /* border: 1px solid red; */
+  transition: all 0.3s ease;
+}
+.tech-name,
+.project-private {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 117%);
+  transform-origin: center;
+  background: var(--green);
+  color: #0a192f;
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+  opacity: 0;
+  display: none;
+  transition: all 0.3s ease;
+  transition-delay: 5s !important;
+}
+.project-private {
+  width: 100px;
+}
+.tech-img-container {
+  display: block;
+  z-index: 99;
+
+  position: relative;
+}
+.tech-used-img:hover .tech-name,
+.code:hover .project-private {
+  opacity: 1 !important;
+  display: block;
+}
+.project-links a {
+  /* border-bottom: 2px solid var(--green); */
+  padding-bottom: 0.2rem;
+  position: relative;
+}
+.project-links span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links span:hover {
+  color: var(--green);
+}
+.other-projects-container {
+  width: 80%;
+  margin: 1rem auto;
+}
+.other-project {
+  background: var(--light-navy);
+  color: #e7e7e7;
+  transition: transform 0.35s ease;
+}
+.other-project h5 {
+  font-size: 1.285rem;
+  font-weight: 700;
+}
+.other-project p {
+  opacity: 0.7;
+  line-height: 140%;
+  font-weight: 300;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 /* ------------------------ Glitch ------------------------*/
 .glitch {

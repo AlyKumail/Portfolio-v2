@@ -28,9 +28,9 @@ const IntroCentered = () => {
 
   useEffect(() => {
     gsap.from(containerRef.current, {
-      y: 30, // Slide up by 50px
+      y: 25, // Slide up by 50px
       opacity: 0, // Start with opacity 0 (fade in)
-      duration: 1.25, // Animation duration
+      duration: 1.5, // Animation duration
       ease: "power3.easeIn", // Easing function
     });
   }, []);

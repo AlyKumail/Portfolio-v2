@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import IntroCentered from "./components/IntroCentered";
 import "./font";
 
@@ -9,20 +9,25 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import Glitches from "./components/Glitches";
 import Socials from "./components/Socials";
+import Tools from "./components/Tools";
+import Projects from "./components/Projects";
+
+import Tilt from "react-parallax-tilt";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   useEffect(() => {
     const reveals = gsap.utils.toArray(".tools-container");
-    console.log("reveals", reveals);
+    const projectDetails = document.querySelectorAll(".project-details");
+    const projectImages = document.querySelectorAll(".projectImg");
+
     reveals.forEach((item, i) => {
       ScrollTrigger.create({
         trigger: item,
         toggleClass: "active",
         start: "top 85%",
         end: "top 5%",
-        markers: true,
         onToggle: (self) => {
           if (self.isActive) {
             gsap.to(item.querySelector("::before"), {
@@ -34,6 +39,57 @@ export default function Home() {
         },
       });
     });
+
+    projectDetails.forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0, x: -25 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%", // Adjust this value based on your design
+            end: "center center",
+            scrub: true,
+            // markers: true,
+          },
+        }
+      );
+    });
+
+    projectImages.forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 10 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 100,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%", // Adjust this value based on your design
+            end: "top 30%",
+            scrub: true,
+          },
+        }
+      );
+    });
+    // console.log(projectTextRef);
+
+    // gsap.to(projectTextRef, {
+    //   scrollTrigger: {
+    //     trigger: projectTextRef,
+    //     toggleClass: "fixed",
+    //     start: "top 55%",
+    //     end: "top 5%",
+    //     markers: true,
+    //     // Add other ScrollTrigger options here
+    //   },
+    // });
   }, []);
 
   return (
@@ -48,152 +104,137 @@ export default function Home() {
         </div>
         <Navbar></Navbar>
         <IntroCentered></IntroCentered>
-        <div className="tools flex flex-col items-center justify-start py-12">
-          <h3 className="mb-8">Tools & Technologies</h3>
-          <section className="tools-container">
-            <div className="tools-wrapper flex items-center gap-3">
-              <img className="tools-noise" src="noise.gif" alt="" />
-              <div className="tools-wrapper-title">Frontend</div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="ts.svg" alt="" />
-                <span>Typescript ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="react.svg" alt="" />
-                <span>React.js ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="nextjs.svg" alt="" />
-                <span>Next.js ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="redux.svg" alt="" />
-                <span>Redux.js ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="tailwind.svg" alt="" />
-                <span>Tailwind ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="js.svg" alt="" />
-                <span>Javascript ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="css.svg" alt="" />
-                <span>CSS ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="html.svg" alt="" />
-                <span>HTML ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="bootstrap.svg" alt="" />
-                <span>Bootstrap ,</span>
-              </div>
-
-              <div className="tool-item flex items-end gap-1">
-                <img src="mui.svg" alt="" />
-                <span>MaterialUI </span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="sass.svg" alt="" />
-                <span>SASS ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="less.svg" alt="" />
-                <span>Less ,</span>
+        <Tools></Tools>
+        <Projects></Projects>
+        <section className="other-projects-container pb-8">
+          <h3 className="mb-16 text-center">
+            Other Projects
+            {/* <svg
+              aria-hidden="true"
+              viewBox="0 0 418 42"
+              class="absolute top-2/3 left-0 h-[0.28em] w-full fill-secondary/50 -z-10"
+              preserveAspectRatio="none"
+            >
+              <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
+            </svg> */}
+          </h3>
+          <div className="other-projects flex items-center gap-5">
+            <div className="other-project drop-shadow-md px-8 py-7 rounded-md w-1/3 hover:-translate-y-2">
+              <header className="flex mb-2 items-center justify-end ">
+                <a
+                  target="_blank"
+                  className="flex items-end gap-1"
+                  href="https://banking-app-web-html.vercel.app/"
+                >
+                  {" "}
+                  <img src="share.svg" alt="" /> <span></span>
+                </a>
+              </header>
+              <h5 className="mb-1">Syldit Landing Page</h5>
+              <p className="mb-2">
+                Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
+                luctus ut risus pharetra. Et egestas tortor fusce sapien blandit
+                viverra{" "}
+              </p>
+              <div className="tech-used flex items-center my-2 gap-3">
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="html.svg" alt="" />
+                  </div>
+                  <span className="tech-name">HTML</span>
+                </div>
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="css.svg" alt="" />
+                  </div>
+                  <span className="tech-name">CSS</span>
+                </div>
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="js.svg" alt="" />
+                  </div>
+                  <span className="tech-name">Javascript</span>
+                </div>
               </div>
             </div>
-          </section>
-          <section className="tools-container">
-            <div className="tools-wrapper  flex items-center gap-3">
-              <img className="tools-noise" src="noise.gif" alt="" />
-              <div className="tools-wrapper-title">Backend</div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="node.svg" alt="" />
-                <span>Node.js ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="express.svg" alt="" />
-                <span>Express.js ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="mongo.svg" alt="" />
-                <span>MongoDB ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="firebase.svg" alt="" />
-                <span>Firebase ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="graphql.svg" alt="" />
-                <span>GraphQL ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="mysql.svg" alt="" />
-                <span>MySql ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="postgre.svg" alt="" />
-                <span>PostgreSQL ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="redis.svg" alt="" />
-                <span>Redis ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="socket.svg" alt="" />
-                <span>Socket.io </span>
+            <div className="other-project drop-shadow-md px-8 py-7 rounded-md w-1/3 hover:-translate-y-2">
+              <header className="flex mb-2 items-center justify-end ">
+                <a
+                  target="_blank"
+                  className="flex items-end gap-1"
+                  href="https://banking-app-web-html.vercel.app/"
+                >
+                  {" "}
+                  <img src="share.svg" alt="" /> <span></span>
+                </a>
+              </header>
+              <h5 className="mb-1">Syldit Landing Page</h5>
+              <p className="mb-2">
+                Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
+                luctus ut risus pharetra. Et egestas tortor fusce sapien blandit
+                viverra{" "}
+              </p>
+              <div className="tech-used flex items-center my-2 gap-3">
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="html.svg" alt="" />
+                  </div>
+                  <span className="tech-name">HTML</span>
+                </div>
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="css.svg" alt="" />
+                  </div>
+                  <span className="tech-name">CSS</span>
+                </div>
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="js.svg" alt="" />
+                  </div>
+                  <span className="tech-name">Javascript</span>
+                </div>
               </div>
             </div>
-          </section>
-          <section className="tools-container">
-            <div className="tools-wrapper  flex items-center gap-3">
-              <img className="tools-noise" src="noise.gif" alt="" />
-              <div className="tools-wrapper-title">Others</div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="vscode.svg" alt="" />
-                <span>VSCode ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="git.svg" alt="" />
-                <span>Git ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="github.svg" alt="" />
-                <span>Github ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="bitbucket.svg" alt="" />
-                <span>Bitbucket ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="jira.svg" alt="" />
-                <span>Jira ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="figma.svg" alt="" />
-                <span>Figma ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="docker.svg" alt="" />
-                <span>Docker ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="npm.svg" alt="" />
-                <span>npm ,</span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="webpack.svg" alt="" />
-                <span>Webpack </span>
-              </div>
-              <div className="tool-item flex items-end gap-1">
-                <img src="eslint.svg" alt="" />
-                <span>ESLint </span>
+            <div className="other-project drop-shadow-md px-8 py-7 rounded-md w-1/3 hover:-translate-y-2">
+              <header className="flex mb-2 items-center justify-end ">
+                <a
+                  target="_blank"
+                  className="flex items-end gap-1"
+                  href="https://banking-app-web-html.vercel.app/"
+                >
+                  {" "}
+                  <img src="share.svg" alt="" /> <span></span>
+                </a>
+              </header>
+              <h5 className="mb-1">Syldit Landing Page</h5>
+              <p className="mb-2">
+                Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
+                luctus ut risus pharetra. Et egestas tortor fusce sapien blandit
+                viverra{" "}
+              </p>
+              <div className="tech-used flex items-center my-2 gap-3">
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="html.svg" alt="" />
+                  </div>
+                  <span className="tech-name">HTML</span>
+                </div>
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="css.svg" alt="" />
+                  </div>
+                  <span className="tech-name">CSS</span>
+                </div>
+                <div className="tech-used-img">
+                  <div className="tech-img-container">
+                    <img className="tech-img" src="js.svg" alt="" />
+                  </div>
+                  <span className="tech-name">Javascript</span>
+                </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
         {/* <Glitches></Glitches> */}
       </div>
     </>
