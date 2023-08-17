@@ -61,7 +61,10 @@ body {
   width: 90%;
   margin: 0 auto;
 }
-
+.wrapper {
+  max-width: 1480px !important;
+  margin: 0 auto;
+}
 .navbar {
   border: 1px solid #64ffda !important;
   background: linear-gradient(137deg, #64ffdb4d 0%, rgba(0, 0, 0, 0) 15%);
@@ -355,6 +358,8 @@ h3 {
   margin: 1rem auto;
 }
 .other-project {
+  /* width: calc(33.33% - 15px);
+  min-width: 325px; */
   background: var(--light-navy);
   color: #e7e7e7;
   transition: transform 0.35s ease;
@@ -369,6 +374,10 @@ h3 {
   font-weight: 300;
   font-size: 0.9rem;
   margin-bottom: 1rem;
+}
+.other-project .code img {
+  width: 24px;
+  height: 24px;
 }
 /* ------------------------ Glitch ------------------------*/
 .glitch {

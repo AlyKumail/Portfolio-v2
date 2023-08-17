@@ -2,7 +2,7 @@ import React from "react";
 
 const Tools = () => {
   return (
-    <div className="tools flex flex-col items-center justify-start py-12">
+    <div className="tools flex flex-col items-center justify-start py-12 my-6 mb-12">
       <h3 className="mb-8">Tools & Technologies</h3>
       <section className="tools-container">
         <div className="tools-wrapper flex items-center gap-3">
