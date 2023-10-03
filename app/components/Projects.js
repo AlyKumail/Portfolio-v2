@@ -6,7 +6,7 @@ const Projects = () => {
       <h3 className="mb-8 text-center">Projects</h3>
       <div className="project flex items-start">
         <div className="project-left w-1/2 py-9 px-12 pl-16 ">
-          <div className="project-details">
+          <div className="project-details animate-fade-right">
             <h4 className="mb-1">Banking App</h4>
             <p>
               Figma to HTML, CSS & Javascript freelance project. It consist of
@@ -51,17 +51,17 @@ const Projects = () => {
         </div>
         <div className="project-right flex flex-col w-1/2 py-9 ">
           <img
-            className="projectImg transition-transform duration-300 rounded-md hover:-translate-y-1"
+            className="projectImg animate-fade-up"
             src="banking1.png"
             alt=""
           />
           <img
-            className="projectImg transition-transform duration-300 rounded-md hover:-translate-y-1"
+            className="projectImg animate-fade-up"
             src="banking2.png"
             alt=""
           />
           <img
-            className="projectImg transition-transform duration-300 rounded-md hover:-translate-y-1"
+            className="projectImg animate-fade-up"
             src="banking3.png"
             alt=""
           />
@@ -69,7 +69,7 @@ const Projects = () => {
       </div>
       <div className="project flex flex-row-reverse items-start">
         <div className="project-left w-1/2 py-9 px-12 pl-16 ">
-          <div className="project-details">
+          <div className="project-details animate-fade-left  ">
             <h4 className="mb-1">Banking App</h4>
             <p>
               Figma to HTML, CSS & Javascript freelance project. It consist of
@@ -114,17 +114,17 @@ const Projects = () => {
         </div>
         <div className="project-right flex flex-col w-1/2 py-9 ">
           <img
-            className="projectImg transition-transform duration-300 rounded-md hover:-translate-y-1"
+            className="projectImg animate-fade-up"
             src="banking1.png"
             alt=""
           />
           <img
-            className="projectImg transition-transform duration-300 rounded-md hover:-translate-y-1"
+            className="projectImg animate-fade-up"
             src="banking2.png"
             alt=""
           />
           <img
-            className="projectImg transition-transform duration-300 rounded-md hover:-translate-y-1"
+            className="projectImg animate-fade-up"
             src="banking3.png"
             alt=""
           />

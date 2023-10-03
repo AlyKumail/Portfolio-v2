@@ -4,7 +4,7 @@ const Socials = () => {
   return (
     <div>
       <div className="socials flex flex-col gap-4">
-        <a href="#">
+        <a href="https://twitter.com/KumaylEth">
           <svg
             width="24"
             height="24"
@@ -18,7 +18,7 @@ const Socials = () => {
             />
           </svg>
         </a>
-        <a href="#">
+        <a href="https://www.linkedin.com/in/alykumail/ ">
           {" "}
           <svg
             width="24"
@@ -33,7 +33,7 @@ const Socials = () => {
             />
           </svg>
         </a>
-        <a href="#">
+        <a href="https://github.com/AlyKumail">
           <svg
             width="20"
             height="20"
@@ -49,7 +49,7 @@ const Socials = () => {
             />
           </svg>
         </a>
-        <a href="#">
+        <a href="https://discordapp.com/users/kumayl">
           <svg
             width="24"
             height="24"

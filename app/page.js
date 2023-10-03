@@ -18,66 +18,58 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   useEffect(() => {
-    const reveals = gsap.utils.toArray(".tools-container");
-    const projectDetails = document.querySelectorAll(".project-details");
-    const projectImages = document.querySelectorAll(".projectImg");
+    const fadeUp = gsap.utils.toArray(".animate-fade-up");
+    const fadeRight = document.querySelectorAll(".animate-fade-right");
+    const fadeLeft = document.querySelectorAll(".animate-fade-left");
 
-    reveals.forEach((item, i) => {
-      ScrollTrigger.create({
-        trigger: item,
-        toggleClass: "active",
-        start: "top 85%",
-        end: "top 5%",
-        onToggle: (self) => {
-          if (self.isActive) {
-            gsap.to(item.querySelector("::before"), {
-              opacity: 1,
-              duration: 1,
-              ease: "power2.out",
-            });
-          }
+    fadeUp.forEach((element, i) => {
+      gsap.from(element, {
+        opacity: 0,
+        y: 50,
+        duration: 1,
+
+        scrollTrigger: {
+          trigger: element,
+          start: "top 95%",
+          end: "bottom 95%",
+          toggleActions: "play none play reverse",
+          once: false,
         },
       });
     });
 
-    projectDetails.forEach((element) => {
-      gsap.fromTo(
-        element,
-        { opacity: 0, x: -25 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%", // Adjust this value based on your design
-            end: "center center",
-            scrub: true,
-            // markers: true,
-          },
-        }
-      );
+    fadeRight.forEach((element) => {
+      gsap.from(element, {
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom top", // End the animation when the top of the element hits the top of the viewport
+
+          toggleActions: "play none play reverse",
+          once: false,
+        },
+      });
     });
 
-    projectImages.forEach((element) => {
-      gsap.fromTo(
-        element,
-        { opacity: 0, y: 10 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 100,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: element,
-            start: "top 80%", // Adjust this value based on your design
-            end: "top 30%",
-            scrub: true,
-          },
-        }
-      );
+    fadeLeft.forEach((element) => {
+      gsap.from(element, {
+        opacity: 0,
+        x: 50,
+        duration: 1,
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+          end: "bottom top", // End the animation when the top of the element hits the top of the viewport
+
+          toggleActions: "play none play reverse",
+          once: false,
+        },
+      });
     });
+
     // console.log(projectTextRef);
 
     // gsap.to(projectTextRef, {
@@ -99,7 +91,9 @@ export default function Home() {
         <Socials></Socials>
         <div className="email flex flex-col gap-3">
           {" "}
-          <span className="email-text">alykumayl@gmail.com</span>
+          <span className="email-text">
+            <a href="mailto:alykumayl@gmail.com">alykumayl@gmail.com</a>
+          </span>
           <span className="vertical-line"></span>
         </div>
         <Navbar></Navbar>
@@ -121,7 +115,7 @@ export default function Home() {
             </h3>
 
             <div className="other-projects grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md  hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md  hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"
@@ -166,7 +160,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"
@@ -211,7 +205,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"
@@ -256,7 +250,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"
@@ -301,7 +295,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"
@@ -347,7 +341,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3 ">
                   <a
                     className="code flex items-end gap-1"
@@ -392,7 +386,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-4 ">
                   <a
                     className="code flex items-end gap-1"
@@ -437,7 +431,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"
@@ -482,7 +476,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a
                     className="code flex items-end gap-1"

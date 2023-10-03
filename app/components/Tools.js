@@ -4,7 +4,7 @@ const Tools = () => {
   return (
     <div className="tools flex flex-col items-center justify-start py-12 my-6 mb-12">
       <h3 className="mb-8">Tools & Technologies</h3>
-      <section className="tools-container">
+      <section className="tools-container animate-fade-up">
         <div className="tools-wrapper flex items-center gap-3">
           <img className="tools-noise" src="noise.gif" alt="" />
           <div className="tools-wrapper-title">Frontend</div>
@@ -59,7 +59,7 @@ const Tools = () => {
           </div>
         </div>
       </section>
-      <section className="tools-container">
+      <section className="tools-container animate-fade-up">
         <div className="tools-wrapper  flex items-center gap-3">
           <img className="tools-noise" src="noise.gif" alt="" />
           <div className="tools-wrapper-title">Backend</div>
@@ -101,7 +101,7 @@ const Tools = () => {
           </div>
         </div>
       </section>
-      <section className="tools-container">
+      <section className="tools-container animate-fade-up">
         <div className="tools-wrapper  flex items-center gap-3">
           <img className="tools-noise" src="noise.gif" alt="" />
           <div className="tools-wrapper-title">Others</div>
