@@ -277,21 +277,21 @@ export default function Home() {
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
                     <div className="tech-img-container">
-                      <img className="tech-img" src="html.svg" alt="" />
+                      <img className="tech-img" src="react.svg" alt="" />
                     </div>
-                    <span className="tech-name">HTML</span>
-                  </div>
-                  <div className="tech-used-img">
-                    <div className="tech-img-container">
-                      <img className="tech-img" src="css.svg" alt="" />
-                    </div>
-                    <span className="tech-name">CSS</span>
+                    <span className="tech-name">React</span>
                   </div>
                   <div className="tech-used-img">
                     <div className="tech-img-container">
                       <img className="tech-img" src="js.svg" alt="" />
                     </div>
                     <span className="tech-name">Javascript</span>
+                  </div>
+                  <div className="tech-used-img">
+                    <div className="tech-img-container">
+                      <img className="tech-img" src="css.svg" alt="" />
+                    </div>
+                    <span className="tech-name">CSS</span>
                   </div>
                 </div>
               </div>
@@ -413,21 +413,21 @@ export default function Home() {
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
                     <div className="tech-img-container">
-                      <img className="tech-img" src="html.svg" alt="" />
+                      <img className="tech-img" src="react.svg" alt="" />
                     </div>
-                    <span className="tech-name">HTML</span>
-                  </div>
-                  <div className="tech-used-img">
-                    <div className="tech-img-container">
-                      <img className="tech-img" src="css.svg" alt="" />
-                    </div>
-                    <span className="tech-name">CSS</span>
+                    <span className="tech-name">React</span>
                   </div>
                   <div className="tech-used-img">
                     <div className="tech-img-container">
                       <img className="tech-img" src="js.svg" alt="" />
                     </div>
                     <span className="tech-name">Javascript</span>
+                  </div>
+                  <div className="tech-used-img">
+                    <div className="tech-img-container">
+                      <img className="tech-img" src="css.svg" alt="" />
+                    </div>
+                    <span className="tech-name">CSS</span>
                   </div>
                 </div>
               </div>
@@ -458,21 +458,21 @@ export default function Home() {
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
                     <div className="tech-img-container">
-                      <img className="tech-img" src="html.svg" alt="" />
+                      <img className="tech-img" src="react.svg" alt="" />
                     </div>
-                    <span className="tech-name">HTML</span>
+                    <span className="tech-name">React</span>
+                  </div>
+                  <div className="tech-used-img">
+                    <div className="tech-img-container">
+                      <img className="tech-img" src="ts.svg" alt="" />
+                    </div>
+                    <span className="tech-name">Typescript</span>
                   </div>
                   <div className="tech-used-img">
                     <div className="tech-img-container">
                       <img className="tech-img" src="css.svg" alt="" />
                     </div>
                     <span className="tech-name">CSS</span>
-                  </div>
-                  <div className="tech-used-img">
-                    <div className="tech-img-container">
-                      <img className="tech-img" src="js.svg" alt="" />
-                    </div>
-                    <span className="tech-name">Javascript</span>
                   </div>
                 </div>
               </div>

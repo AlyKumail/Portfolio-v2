@@ -70,7 +70,7 @@ const Projects = () => {
       <div className="project flex flex-row-reverse items-start">
         <div className="project-left w-1/2 py-9 px-12 pl-16 ">
           <div className="project-details animate-fade-left  ">
-            <h4 className="mb-1">Banking App</h4>
+            <h4 className="mb-1">X-Recruiter</h4>
             <p>
               Figma to HTML, CSS & Javascript freelance project. It consist of
               multiple modals on different pages and is fully mobile responsive.
@@ -104,7 +104,7 @@ const Projects = () => {
               <a
                 target="_blank"
                 className="flex items-end gap-1"
-                href="https://banking-app-web-html.vercel.app/"
+                href="https://x-recruiter.vercel.app/"
               >
                 {" "}
                 <img src="desktop.svg" alt="" /> <span>Demo</span>
@@ -115,17 +115,22 @@ const Projects = () => {
         <div className="project-right flex flex-col w-1/2 py-9 ">
           <img
             className="projectImg animate-fade-up"
-            src="banking1.png"
+            src="xrecruiter1.png"
             alt=""
           />
           <img
             className="projectImg animate-fade-up"
-            src="banking2.png"
+            src="xrecruiter2.png"
             alt=""
           />
           <img
             className="projectImg animate-fade-up"
-            src="banking3.png"
+            src="xrecruiter3.png"
+            alt=""
+          />
+          <img
+            className="projectImg animate-fade-up"
+            src="xrecruiter4.png"
             alt=""
           />
         </div>
