@@ -21,6 +21,10 @@ const Tools = () => {
             <span>Next.js ,</span>
           </div>
           <div className="tool-item flex items-end gap-1">
+            <img src="vue.svg" alt="" />
+            <span>Vue.js ,</span>
+          </div>
+          <div className="tool-item flex items-end gap-1">
             <img src="redux.svg" alt="" />
             <span>Redux.js ,</span>
           </div>
@@ -90,14 +94,6 @@ const Tools = () => {
           <div className="tool-item flex items-end gap-1">
             <img src="postgre.svg" alt="" />
             <span>PostgreSQL ,</span>
-          </div>
-          <div className="tool-item flex items-end gap-1">
-            <img src="redis.svg" alt="" />
-            <span>Redis ,</span>
-          </div>
-          <div className="tool-item flex items-end gap-1">
-            <img src="socket.svg" alt="" />
-            <span>Socket.io </span>
           </div>
         </div>
       </section>
