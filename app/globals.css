@@ -16,6 +16,10 @@
 body {
   color: var(--foreground-rgb) !important;
   background-color: var(--background-color);
+  scroll-behavior: smooth;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* Style the scrollbar track (background) */

@@ -135,9 +135,30 @@ export default function Home() {
                 </header>
                 <h5 className="mb-1">Alex Gamble</h5>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
+                  Freelance project where I used regular HTML,CSS & JS. It have
+                  many Frontend interactions like Sidebar toggle and many more.
+                  Other screens : <br></br>{" "}
+                  <a
+                    style={{ color: "royalblue" }}
+                    href="https://alex-gamble.vercel.app/weight-tracking-entry.html"
+                    className="underline"
+                  >
+                    Screen1
+                  </a>{" "}
+                  <a
+                    style={{ color: "royalblue" }}
+                    href="https://alex-gamble.vercel.app/dashboard-meals.html"
+                    className="underline"
+                  >
+                    Screen2
+                  </a>{" "}
+                  <a
+                    style={{ color: "royalblue" }}
+                    href="https://alex-gamble.vercel.app/sign-up.html"
+                    className="underline"
+                  >
+                    Signup
+                  </a>{" "}
                 </p>
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
@@ -180,9 +201,8 @@ export default function Home() {
                 </header>
                 <h5 className="mb-1">Makamat Landing Page</h5>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
+                  Freelance project where I build a landing page for an RFID
+                  company.{" "}
                 </p>
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
@@ -225,9 +245,8 @@ export default function Home() {
                 </header>
                 <h5 className="mb-1">Syldit Landing Page</h5>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
+                  A landing page for a dating app, I have used few simple
+                  animations using css keyframes.{" "}
                 </p>
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
@@ -270,9 +289,54 @@ export default function Home() {
                 </header>
                 <h5 className="mb-1">FXDX Landing Page</h5>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
+                  Freelance project where I build a landing page for a startup
+                  i.e. fxdx , they have gone through after changes but the first
+                  one was build by me{" "}
+                </p>
+                <div className="tech-used flex items-center my-2 gap-3">
+                  <div className="tech-used-img">
+                    <div className="tech-img-container">
+                      <img className="tech-img" src="react.svg" alt="" />
+                    </div>
+                    <span className="tech-name">React</span>
+                  </div>
+                  <div className="tech-used-img">
+                    <div className="tech-img-container">
+                      <img className="tech-img" src="js.svg" alt="" />
+                    </div>
+                    <span className="tech-name">Javascript</span>
+                  </div>
+                  <div className="tech-used-img">
+                    <div className="tech-img-container">
+                      <img className="tech-img" src="css.svg" alt="" />
+                    </div>
+                    <span className="tech-name">CSS</span>
+                  </div>
+                </div>
+              </div>
+              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
+                <header className="flex mb-2 items-center justify-end gap-4 ">
+                  <a className="relative code flex items-end gap-1" href="#">
+                    {" "}
+                    <img src="github-light.svg" alt="" />
+                    <span style={{ width: "80px" }} className="project-private">
+                      Repo is private
+                    </span>
+                  </a>
+                  <a
+                    target="_blank"
+                    className="flex items-end gap-1"
+                    href="https://codera.app/schools/"
+                  >
+                    {" "}
+                    <img src="share.svg" alt="" /> <span></span>
+                  </a>
+                </header>
+                <h5 className="mb-1">Codera Schools - Landing Page</h5>
+                <p className="mb-2">
+                  Freelance project where I developed Landing Page for a startup
+                  i.e. Codera, I have used regular HTML, CSS & JS. And GSAP for
+                  animations{" "}
                 </p>
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
@@ -315,9 +379,7 @@ export default function Home() {
                 </header>
                 <h5 className="mb-1">Colloquim Landing Page</h5>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
+                  Freelance project where I build a landing page using React.{" "}
                 </p>
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
@@ -361,9 +423,29 @@ export default function Home() {
                 </header>
                 <h5 className="mb-1">Load Guard</h5>
                 <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
+                  Freelance project having dashboard screens. Here are its
+                  different screens : <br></br>
+                  <a
+                    style={{ color: "royalblue" }}
+                    href="https://load-guard.vercel.app/company.html"
+                    className="underline"
+                  >
+                    Company
+                  </a>{" "}
+                  <a
+                    style={{ color: "royalblue" }}
+                    href="https://load-guard.vercel.app/results.html"
+                    className="underline"
+                  >
+                    Results
+                  </a>{" "}
+                  <a
+                    style={{ color: "royalblue" }}
+                    href="https://load-guard.vercel.app/homepagefree.html"
+                    className="underline"
+                  >
+                    Home
+                  </a>{" "}
                 </p>
                 <div className="tech-used flex items-center my-2 gap-3">
                   <div className="tech-used-img">
@@ -386,51 +468,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
-                <header className="flex mb-2 items-center justify-end gap-4 ">
-                  <a
-                    className="code flex items-end gap-1"
-                    href="https://github.com/AlyKumail/Ignite2.0"
-                  >
-                    {" "}
-                    <img src="github-light.svg" alt="" />
-                  </a>
-                  <a
-                    target="_blank"
-                    className="flex items-end gap-1"
-                    href="https://ignite2-0-lmmz.vercel.app/"
-                  >
-                    {" "}
-                    <img src="share.svg" alt="" /> <span></span>
-                  </a>
-                </header>
-                <h5 className="mb-1">Ignite2.0</h5>
-                <p className="mb-2">
-                  Lorem ipsum dolor sit amet consectetur. Ultrices venenatis
-                  luctus ut risus pharetra. Et egestas tortor fusce sapien
-                  blandit viverra{" "}
-                </p>
-                <div className="tech-used flex items-center my-2 gap-3">
-                  <div className="tech-used-img">
-                    <div className="tech-img-container">
-                      <img className="tech-img" src="react.svg" alt="" />
-                    </div>
-                    <span className="tech-name">React</span>
-                  </div>
-                  <div className="tech-used-img">
-                    <div className="tech-img-container">
-                      <img className="tech-img" src="js.svg" alt="" />
-                    </div>
-                    <span className="tech-name">Javascript</span>
-                  </div>
-                  <div className="tech-used-img">
-                    <div className="tech-img-container">
-                      <img className="tech-img" src="css.svg" alt="" />
-                    </div>
-                    <span className="tech-name">CSS</span>
-                  </div>
-                </div>
-              </div>
+
               <div className="other-project animate-fade-up drop-shadow-md px-8 py-7 rounded-md hover:-translate-y-1">
                 <header className="flex mb-2 items-center justify-end gap-3">
                   <a

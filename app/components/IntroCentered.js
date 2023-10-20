@@ -50,8 +50,8 @@ const IntroCentered = () => {
       </p>
       <div className="btn-container">
         <span className="btn-bg"></span>
-        <a href="myresume.pdf" download="AliKumail.pdf">
-          <button className="btn"> Resume</button>
+        <a href="#works">
+          <button className="btn"> View Works</button>
         </a>
       </div>
     </main>

@@ -24,7 +24,7 @@ const Navbar = () => {
         </li>
         <li className="px-6 border-r">
           <a
-            href="#"
+            href="#works"
             className="font-medium   border-white transition-all ease-in duration-200 "
           >
             <span className="navbar-text-num">3. </span>{" "}
